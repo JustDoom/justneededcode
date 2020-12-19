@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cracked_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "justneeded:cracked_stone_bricks_stairs_item",
+    "count": 4
+  },
+  "group": "wool_stairs_recipe"
+}

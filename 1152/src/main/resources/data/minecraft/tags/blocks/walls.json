@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "justneeded:end_stone_wall",
+    "justneeded:netherrack_wall",
+    "justneeded:cracked_stone_bricks_wall",
+    "justneeded:smooth_stone_wall"
+  ]
+}

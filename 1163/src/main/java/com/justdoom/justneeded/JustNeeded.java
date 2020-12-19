@@ -1,0 +1,47 @@
+package com.justdoom.justneeded;
+
+import com.justdoom.justneeded.init.BlockInit;
+import com.justdoom.justneeded.init.ItemInit;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.registry.Registry;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+@Mod("justneeded")
+public class JustNeeded {
+    public static final String MOD_ID = "justneeded";
+    //private static final Logger LOGGER = LogManager.getLogger();
+
+    public JustNeeded() {
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        ItemInit.init();
+        BlockInit.init();
+
+        MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void setup(final FMLCommonSetupEvent event) {
+
+    }
+
+    private void doClientStuff(final FMLClientSetupEvent event) {
+
+    }
+
+    public static final ItemGroup JustNeededTab = new ItemGroup("justneededtab") {
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(BlockInit.BLUE_WOOL_STAIRS.get());
+        }
+    };
+}
